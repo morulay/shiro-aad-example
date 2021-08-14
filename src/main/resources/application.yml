@@ -1,4 +1,12 @@
-shiro.aad:
-#  tenant: 
-#  tenant-id: 
-#  client-id: 
+shiro:
+  loginUrl: /login
+  unauthorizedUrl: /unauthorized
+
+  aad:
+    tenant:
+    tenant-id:
+    client-id:
+    post-logout-uri: /lobby
+    redirect-uri: /login
+    filter-chain-defs:
+      "[/static/**]": anon
